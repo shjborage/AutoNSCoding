@@ -19,9 +19,7 @@ Demo and CocoaPods support is comming soon.
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-  if ([super respondsToSelector:@selector(encodeWithCoder:)])
-    [super encodeWithCoder:aCoder];
-  
+  [super encodeWithCoder:aCoder];
   [self encodeAutoWithCoder:aCoder class:[Res class]];
 }
 
@@ -43,9 +41,6 @@ Demo and CocoaPods support is comming soon.
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-  if ([super respondsToSelector:@selector(encodeWithCoder:)])
-    [super encodeWithCoder:aCoder];
-  
   [self encodeAutoWithCoder:aCoder];
 }
 
