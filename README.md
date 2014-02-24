@@ -6,6 +6,10 @@ Few words to make your NSCoding protocol automatic.
 
 ##Usage
 
+### Install
+Copy two files to you project, and `#import "NSObject+NSCoding.h"`.
+Demo and CocoaPods support is comming soon.
+
 ###Custom Class
 
 `self` is a subclass of `Res`
