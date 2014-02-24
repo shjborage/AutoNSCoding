@@ -12,10 +12,10 @@
     for (int j=0; j<methodCount; j++) {
       Method mt = methods[j];
       NSString *methodName = NSStringFromSelector(method_getName(mt));
-      BFLog(@"method:%@", methodName);
+      NSLog(@"method:%@", methodName);
       if ([methodName isEqualToString:name]) {
         id value = method_invoke(self, mt);
-        BFLog(@"value:%@", value);
+        NSLog(@"value:%@", value);
         break;
       }
     }
@@ -46,33 +46,33 @@
       NSString *returnType = [class getMethodReturnType:mt];
       if ([returnType isEqualToString:@"i"]) {
         int intValue = ((int(*)(id, Method))method_invoke)(self, mt);
-        BFLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
         
         [aCoder encodeInteger:intValue forKey:name];
       } else if ([returnType isEqualToString:@"I"]) {
         unsigned intValue = ((unsigned(*)(id, Method))method_invoke)(self, mt);
-        BFLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
         
         [aCoder encodeInteger:intValue forKey:name];
       } else if ([returnType isEqualToString:@"f"]) {
         double doubleValue = ((double(*)(id, Method))method_invoke)(self, mt);
-        BFLog(@"Encode %@ %@ double value:%.f", NSStringFromClass(class), name, doubleValue);
+        NSLog(@"Encode %@ %@ double value:%.f", NSStringFromClass(class), name, doubleValue);
         
         [aCoder encodeDouble:doubleValue forKey:name];
       } else if ([returnType isEqualToString:@"c"]) {   // char 一般为BOOL, property不用char即可
         BOOL boolValue = ((char(*)(id, Method))method_invoke)(self, mt);
-        BFLog(@"Encode %@ %@ BOOL value:%d", NSStringFromClass(class), name, boolValue);
+        NSLog(@"Encode %@ %@ BOOL value:%d", NSStringFromClass(class), name, boolValue);
         
         [aCoder encodeBool:boolValue forKey:name];
       } else {
         @try {
           id value = ((id(*)(id, Method))method_invoke)(self, mt);
-          BFLog(@"Encode %@ %@  value:%@", NSStringFromClass(class), name, value);
+          NSLog(@"Encode %@ %@  value:%@", NSStringFromClass(class), name, value);
           
           [aCoder encodeObject:value forKey:name];
         }
         @catch (NSException *exception) {
-          BFLog(@"Encode Return Value Type undefined in %@", NSStringFromClass(class));
+          NSLog(@"Encode Return Value Type undefined in %@", NSStringFromClass(class));
         }
         @finally {
         }
@@ -104,35 +104,35 @@
         void (*method_invokeTyped)(id self, Method mt, int value) = (void*)method_invoke;
         method_invokeTyped(self, mt, intValue);
         
-        BFLog(@"Decode %@ %@  intValue:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Decode %@ %@  intValue:%d", NSStringFromClass(class), name, intValue);
       } else if ([argumentType isEqualToString:@"I"]) {
         unsigned intValue = [aDecoder decodeIntegerForKey:name];
         void (*method_invokeTyped)(id self, Method mt, unsigned value) = (void*)method_invoke;
         method_invokeTyped(self, mt, intValue);
         
-        BFLog(@"Decode %@ %@   unsigned intValue:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Decode %@ %@   unsigned intValue:%d", NSStringFromClass(class), name, intValue);
       } else if ([argumentType isEqualToString:@"f"]) {
         double doubleValue = [aDecoder decodeDoubleForKey:name];
         void (*method_invokeTyped)(id self, Method mt, double value) = (void*)method_invoke;
         method_invokeTyped(self, mt, doubleValue);
         
-        BFLog(@"Decode %@ %@  doubleValue:%f", NSStringFromClass(class), name, doubleValue);
+        NSLog(@"Decode %@ %@  doubleValue:%f", NSStringFromClass(class), name, doubleValue);
       } else if ([argumentType isEqualToString:@"c"]) {   // char 一般为BOOL, property不用char即可
         BOOL boolValue = [aDecoder decodeBoolForKey:name];
         void (*method_invokeTyped)(id self, Method mt, BOOL value) = (void*)method_invoke;
         method_invokeTyped(self, mt, boolValue);
         
-        BFLog(@"Decode %@ %@  boolValue:%d", NSStringFromClass(class), name, boolValue);
+        NSLog(@"Decode %@ %@  boolValue:%d", NSStringFromClass(class), name, boolValue);
       } else {
         @try {
           id value = [aDecoder decodeObjectForKey:name];
           if (value != nil)
             method_invoke(self, mt, value);
           
-          BFLog(@"Decode %@ %@  value:%@", NSStringFromClass(class), name, value);
+          NSLog(@"Decode %@ %@  value:%@", NSStringFromClass(class), name, value);
         }
         @catch (NSException *exception) {
-          BFLog(@"Decode Argument Value Type undefined in %@", NSStringFromClass(class));
+          NSLog(@"Decode Argument Value Type undefined in %@", NSStringFromClass(class));
         }
         @finally {
         }

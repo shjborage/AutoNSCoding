@@ -39,7 +39,8 @@ Few words to make your NSCoding protocol automatic.
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-  [super encodeWithCoder:aCoder];
+  if ([super respondsToSelector:@selector(encodeWithCoder:)])
+    [super encodeWithCoder:aCoder];
   
   [self encodeAutoWithCoder:aCoder];
 }
