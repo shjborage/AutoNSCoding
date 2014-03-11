@@ -3,6 +3,10 @@ AutoNSCoding
 
 Few words to make your NSCoding protocol automatic.
 
+##TODO
+
+add Demo Project.
+
 
 ##Usage
 
