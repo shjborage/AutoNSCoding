@@ -1,9 +1,8 @@
 //
 //  NSObject+NSCoding.m
-//  BFServiceStation
 //
 //  Created by shjborage on 2/17/14.
-//  Copyright (c) 2014 Baofeng. All rights reserved.
+//  Copyright (c) 2014 Saick. All rights reserved.
 //
 
 /*
@@ -54,7 +53,7 @@
         NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
         
         [aCoder encodeInteger:intValue forKey:name];
-      } else if ([returnType isEqualToString:@"f"]) {
+      } else if ([returnType isEqualToString:@"f"] || [returnType isEqualToString:@"d"]) {
         double doubleValue = ((double(*)(id, Method))method_invoke)(self, mt);
         NSLog(@"Encode %@ %@ double value:%.f", NSStringFromClass(class), name, doubleValue);
         
@@ -111,7 +110,7 @@
         method_invokeTyped(self, mt, intValue);
         
         NSLog(@"Decode %@ %@   unsigned intValue:%d", NSStringFromClass(class), name, intValue);
-      } else if ([argumentType isEqualToString:@"f"]) {
+      } else if ([argumentType isEqualToString:@"f"] || [argumentType isEqualToString:@"d"]) {
         double doubleValue = [aDecoder decodeDoubleForKey:name];
         void (*method_invokeTyped)(id self, Method mt, double value) = (void*)method_invoke;
         method_invokeTyped(self, mt, doubleValue);
@@ -123,6 +122,12 @@
         method_invokeTyped(self, mt, boolValue);
         
         NSLog(@"Decode %@ %@  boolValue:%d", NSStringFromClass(class), name, boolValue);
+      } else if ([argumentType isEqualToString:@"@"]) {
+        NSString *value = [aDecoder decodeObjectForKey:name];
+        void (*method_invokeTyped)(id self, Method mt, NSString *value) = (void*)method_invoke;
+        method_invokeTyped(self, mt, value);
+        
+        NSLog(@"Decode %@ %@  strValue:%@", NSStringFromClass(class), name, value);
       } else {
         @try {
           id value = [aDecoder decodeObjectForKey:name];

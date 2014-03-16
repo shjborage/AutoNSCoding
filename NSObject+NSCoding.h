@@ -1,9 +1,9 @@
 //
 //  NSObject+NSCoding.h
-//  BFServiceStation
+//  Version:  0.1.1
 //
 //  Created by shjborage on 2/17/14.
-//  Copyright (c) 2014 Baofeng. All rights reserved.
+//  Copyright (c) 2014 Saick. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
