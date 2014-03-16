@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CF2335CC4C04BC69843792A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84083FA2F92E4F149F8BA06D /* libPods.a */; };
+		A0C0AE0518D597CE00BD8F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0418D597CE00BD8F93 /* Foundation.framework */; };
+		A0C0AE0718D597CE00BD8F93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0618D597CE00BD8F93 /* CoreGraphics.framework */; };
+		A0C0AE0918D597CE00BD8F93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0818D597CE00BD8F93 /* UIKit.framework */; };
+		A0C0AE0F18D597CE00BD8F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C0AE0D18D597CE00BD8F93 /* InfoPlist.strings */; };
+		A0C0AE1118D597CE00BD8F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE1018D597CE00BD8F93 /* main.m */; };
+		A0C0AE1518D597CE00BD8F93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE1418D597CE00BD8F93 /* AppDelegate.m */; };
+		A0C0AE1718D597CE00BD8F93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0AE1618D597CE00BD8F93 /* Images.xcassets */; };
+		A0C0AE1E18D597CE00BD8F93 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE1D18D597CE00BD8F93 /* XCTest.framework */; };
+		A0C0AE1F18D597CE00BD8F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0418D597CE00BD8F93 /* Foundation.framework */; };
+		A0C0AE2018D597CE00BD8F93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0818D597CE00BD8F93 /* UIKit.framework */; };
+		A0C0AE2818D597CE00BD8F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C0AE2618D597CE00BD8F93 /* InfoPlist.strings */; };
+		A0C0AE2A18D597CE00BD8F93 /* AutoNSCodingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */; };
+		A0C0AE3518D5983E00BD8F93 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE3418D5983E00BD8F93 /* NSObject+NSCoding.m */; };
+		A0C0AE4618D59CDE00BD8F93 /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4518D59CDE00BD8F93 /* Parent.m */; };
+		A0C0AE4918D59CF000BD8F93 /* Children.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4818D59CF000BD8F93 /* Children.m */; };
+		A0C0AE4C18D59D5D00BD8F93 /* FullCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4B18D59D5D00BD8F93 /* FullCopy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0C0AE2118D597CE00BD8F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0C0ADF918D597CE00BD8F93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0C0AE0018D597CE00BD8F93;
+			remoteInfo = AutoNSCodingDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84083FA2F92E4F149F8BA06D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C0AE0118D597CE00BD8F93 /* AutoNSCodingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoNSCodingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C0AE0418D597CE00BD8F93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A0C0AE0618D597CE00BD8F93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A0C0AE0818D597CE00BD8F93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A0C0AE0C18D597CE00BD8F93 /* AutoNSCodingDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoNSCodingDemo-Info.plist"; sourceTree = "<group>"; };
+		A0C0AE0E18D597CE00BD8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A0C0AE1018D597CE00BD8F93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A0C0AE1218D597CE00BD8F93 /* AutoNSCodingDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoNSCodingDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A0C0AE1318D597CE00BD8F93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A0C0AE1418D597CE00BD8F93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A0C0AE1618D597CE00BD8F93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A0C0AE1C18D597CE00BD8F93 /* AutoNSCodingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoNSCodingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C0AE1D18D597CE00BD8F93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A0C0AE2518D597CE00BD8F93 /* AutoNSCodingDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoNSCodingDemoTests-Info.plist"; sourceTree = "<group>"; };
+		A0C0AE2718D597CE00BD8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoNSCodingDemoTests.m; sourceTree = "<group>"; };
+		A0C0AE3318D5983E00BD8F93 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NSCoding.h"; path = "../NSObject+NSCoding.h"; sourceTree = "<group>"; };
+		A0C0AE3418D5983E00BD8F93 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NSCoding.m"; path = "../NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		A0C0AE4418D59CDE00BD8F93 /* Parent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parent.h; sourceTree = "<group>"; };
+		A0C0AE4518D59CDE00BD8F93 /* Parent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parent.m; sourceTree = "<group>"; };
+		A0C0AE4718D59CF000BD8F93 /* Children.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Children.h; sourceTree = "<group>"; };
+		A0C0AE4818D59CF000BD8F93 /* Children.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Children.m; sourceTree = "<group>"; };
+		A0C0AE4A18D59D5D00BD8F93 /* FullCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullCopy.h; sourceTree = "<group>"; };
+		A0C0AE4B18D59D5D00BD8F93 /* FullCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullCopy.m; sourceTree = "<group>"; };
+		DA76CC628CBD41BFAC3ADCF1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C0ADFE18D597CE00BD8F93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE0718D597CE00BD8F93 /* CoreGraphics.framework in Frameworks */,
+				A0C0AE0918D597CE00BD8F93 /* UIKit.framework in Frameworks */,
+				A0C0AE0518D597CE00BD8F93 /* Foundation.framework in Frameworks */,
+				7CF2335CC4C04BC69843792A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C0AE1918D597CE00BD8F93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE1E18D597CE00BD8F93 /* XCTest.framework in Frameworks */,
+				A0C0AE2018D597CE00BD8F93 /* UIKit.framework in Frameworks */,
+				A0C0AE1F18D597CE00BD8F93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0C0ADF818D597CE00BD8F93 = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE3318D5983E00BD8F93 /* NSObject+NSCoding.h */,
+				A0C0AE3418D5983E00BD8F93 /* NSObject+NSCoding.m */,
+				A0C0AE0A18D597CE00BD8F93 /* AutoNSCodingDemo */,
+				A0C0AE2318D597CE00BD8F93 /* AutoNSCodingDemoTests */,
+				A0C0AE0318D597CE00BD8F93 /* Frameworks */,
+				A0C0AE0218D597CE00BD8F93 /* Products */,
+				DA76CC628CBD41BFAC3ADCF1 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C0AE0218D597CE00BD8F93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE0118D597CE00BD8F93 /* AutoNSCodingDemo.app */,
+				A0C0AE1C18D597CE00BD8F93 /* AutoNSCodingDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C0AE0318D597CE00BD8F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE0418D597CE00BD8F93 /* Foundation.framework */,
+				A0C0AE0618D597CE00BD8F93 /* CoreGraphics.framework */,
+				A0C0AE0818D597CE00BD8F93 /* UIKit.framework */,
+				A0C0AE1D18D597CE00BD8F93 /* XCTest.framework */,
+				84083FA2F92E4F149F8BA06D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0C0AE0A18D597CE00BD8F93 /* AutoNSCodingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE4318D59CCC00BD8F93 /* Models */,
+				A0C0AE1318D597CE00BD8F93 /* AppDelegate.h */,
+				A0C0AE1418D597CE00BD8F93 /* AppDelegate.m */,
+				A0C0AE1618D597CE00BD8F93 /* Images.xcassets */,
+				A0C0AE0B18D597CE00BD8F93 /* Supporting Files */,
+			);
+			path = AutoNSCodingDemo;
+			sourceTree = "<group>";
+		};
+		A0C0AE0B18D597CE00BD8F93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE0C18D597CE00BD8F93 /* AutoNSCodingDemo-Info.plist */,
+				A0C0AE0D18D597CE00BD8F93 /* InfoPlist.strings */,
+				A0C0AE1018D597CE00BD8F93 /* main.m */,
+				A0C0AE1218D597CE00BD8F93 /* AutoNSCodingDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0C0AE2318D597CE00BD8F93 /* AutoNSCodingDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */,
+				A0C0AE2418D597CE00BD8F93 /* Supporting Files */,
+			);
+			path = AutoNSCodingDemoTests;
+			sourceTree = "<group>";
+		};
+		A0C0AE2418D597CE00BD8F93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE2518D597CE00BD8F93 /* AutoNSCodingDemoTests-Info.plist */,
+				A0C0AE2618D597CE00BD8F93 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0C0AE4318D59CCC00BD8F93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AE4418D59CDE00BD8F93 /* Parent.h */,
+				A0C0AE4518D59CDE00BD8F93 /* Parent.m */,
+				A0C0AE4718D59CF000BD8F93 /* Children.h */,
+				A0C0AE4818D59CF000BD8F93 /* Children.m */,
+				A0C0AE4A18D59D5D00BD8F93 /* FullCopy.h */,
+				A0C0AE4B18D59D5D00BD8F93 /* FullCopy.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0C0AE0018D597CE00BD8F93 /* AutoNSCodingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C0AE2D18D597CE00BD8F93 /* Build configuration list for PBXNativeTarget "AutoNSCodingDemo" */;
+			buildPhases = (
+				5F98168632104905AB92F2B2 /* Check Pods Manifest.lock */,
+				A0C0ADFD18D597CE00BD8F93 /* Sources */,
+				A0C0ADFE18D597CE00BD8F93 /* Frameworks */,
+				A0C0ADFF18D597CE00BD8F93 /* Resources */,
+				36FA89CC26994A82AE30496A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoNSCodingDemo;
+			productName = AutoNSCodingDemo;
+			productReference = A0C0AE0118D597CE00BD8F93 /* AutoNSCodingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A0C0AE1B18D597CE00BD8F93 /* AutoNSCodingDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C0AE3018D597CE00BD8F93 /* Build configuration list for PBXNativeTarget "AutoNSCodingDemoTests" */;
+			buildPhases = (
+				A0C0AE1818D597CE00BD8F93 /* Sources */,
+				A0C0AE1918D597CE00BD8F93 /* Frameworks */,
+				A0C0AE1A18D597CE00BD8F93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0C0AE2218D597CE00BD8F93 /* PBXTargetDependency */,
+			);
+			name = AutoNSCodingDemoTests;
+			productName = AutoNSCodingDemoTests;
+			productReference = A0C0AE1C18D597CE00BD8F93 /* AutoNSCodingDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C0ADF918D597CE00BD8F93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Saick;
+				TargetAttributes = {
+					A0C0AE1B18D597CE00BD8F93 = {
+						TestTargetID = A0C0AE0018D597CE00BD8F93;
+					};
+				};
+			};
+			buildConfigurationList = A0C0ADFC18D597CE00BD8F93 /* Build configuration list for PBXProject "AutoNSCodingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A0C0ADF818D597CE00BD8F93;
+			productRefGroup = A0C0AE0218D597CE00BD8F93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C0AE0018D597CE00BD8F93 /* AutoNSCodingDemo */,
+				A0C0AE1B18D597CE00BD8F93 /* AutoNSCodingDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0C0ADFF18D597CE00BD8F93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE0F18D597CE00BD8F93 /* InfoPlist.strings in Resources */,
+				A0C0AE1718D597CE00BD8F93 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C0AE1A18D597CE00BD8F93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE2818D597CE00BD8F93 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36FA89CC26994A82AE30496A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F98168632104905AB92F2B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C0ADFD18D597CE00BD8F93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE3518D5983E00BD8F93 /* NSObject+NSCoding.m in Sources */,
+				A0C0AE4C18D59D5D00BD8F93 /* FullCopy.m in Sources */,
+				A0C0AE4618D59CDE00BD8F93 /* Parent.m in Sources */,
+				A0C0AE1518D597CE00BD8F93 /* AppDelegate.m in Sources */,
+				A0C0AE4918D59CF000BD8F93 /* Children.m in Sources */,
+				A0C0AE1118D597CE00BD8F93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C0AE1818D597CE00BD8F93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C0AE2A18D597CE00BD8F93 /* AutoNSCodingDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0C0AE2218D597CE00BD8F93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0C0AE0018D597CE00BD8F93 /* AutoNSCodingDemo */;
+			targetProxy = A0C0AE2118D597CE00BD8F93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A0C0AE0D18D597CE00BD8F93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C0AE0E18D597CE00BD8F93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A0C0AE2618D597CE00BD8F93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0C0AE2718D597CE00BD8F93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0C0AE2B18D597CE00BD8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A0C0AE2C18D597CE00BD8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0C0AE2E18D597CE00BD8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA76CC628CBD41BFAC3ADCF1 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoNSCodingDemo/AutoNSCodingDemo-Prefix.pch";
+				INFOPLIST_FILE = "AutoNSCodingDemo/AutoNSCodingDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A0C0AE2F18D597CE00BD8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA76CC628CBD41BFAC3ADCF1 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoNSCodingDemo/AutoNSCodingDemo-Prefix.pch";
+				INFOPLIST_FILE = "AutoNSCodingDemo/AutoNSCodingDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A0C0AE3118D597CE00BD8F93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AutoNSCodingDemo.app/AutoNSCodingDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoNSCodingDemo/AutoNSCodingDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AutoNSCodingDemoTests/AutoNSCodingDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A0C0AE3218D597CE00BD8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AutoNSCodingDemo.app/AutoNSCodingDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AutoNSCodingDemo/AutoNSCodingDemo-Prefix.pch";
+				INFOPLIST_FILE = "AutoNSCodingDemoTests/AutoNSCodingDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C0ADFC18D597CE00BD8F93 /* Build configuration list for PBXProject "AutoNSCodingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C0AE2B18D597CE00BD8F93 /* Debug */,
+				A0C0AE2C18D597CE00BD8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C0AE2D18D597CE00BD8F93 /* Build configuration list for PBXNativeTarget "AutoNSCodingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C0AE2E18D597CE00BD8F93 /* Debug */,
+				A0C0AE2F18D597CE00BD8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C0AE3018D597CE00BD8F93 /* Build configuration list for PBXNativeTarget "AutoNSCodingDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C0AE3118D597CE00BD8F93 /* Debug */,
+				A0C0AE3218D597CE00BD8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C0ADF918D597CE00BD8F93 /* Project object */;
+}

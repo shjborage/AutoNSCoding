@@ -3,35 +3,51 @@ AutoNSCoding
 
 Few words to make your NSCoding protocol automatic.
 
-##TODO
-
-add Demo Project.
-
 
 ##Usage
 
 ### Install
 Copy two files to you project, and `#import "NSObject+NSCoding.h"`.
-Demo and CocoaPods support is comming soon.
+`CocoaPods` is support now.
 
 ###Custom Class
 
-`self` is a subclass of `Res`
+`self` is a subclass of `Parent`
 
+Parent:
 ```objc
-#pragma mark - NSCoping
+#pragma mark - NSCoding
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+- (void)encodeWithCoder:(NSCoder *)encoder
 {
-  [super encodeWithCoder:aCoder];
-  [self encodeAutoWithCoder:aCoder class:[Res class]];
+  [self encodeAutoWithCoder:encoder class:[Parent class]];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (id)initWithCoder:(NSCoder *)decoder
 {
-  self = [super initWithCoder:aDecoder];
-  if (self) {
-    [self decodeAutoWithAutoCoder:aDecoder class:[Res class]];
+  if (self = [super init]) {
+    [self decodeAutoWithAutoCoder:decoder class:[Parent class]];
+  }
+  return self;
+}
+
+```
+
+Children:
+```objc
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+  [super encodeWithCoder:encoder];
+  
+  [self encodeAutoWithCoder:encoder];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+  if (self = [super initWithCoder:decoder]) {
+    [self decodeAutoWithAutoCoder:decoder];
   }
   return self;
 }

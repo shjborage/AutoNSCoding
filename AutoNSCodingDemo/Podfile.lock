@@ -1,0 +1,10 @@
+PODS:
+  - TMCache (1.2.0)
+
+DEPENDENCIES:
+  - TMCache
+
+SPEC CHECKSUMS:
+  TMCache: 4b05e1b124d9f7e8d449640e059cff4cda17ed27
+
+COCOAPODS: 0.29.0
