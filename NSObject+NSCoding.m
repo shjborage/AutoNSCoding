@@ -43,7 +43,7 @@
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
       NSString *returnType = [class getMethodReturnType:mt];
-      if ([returnType isEqualToString:@"i"]) {
+      if ([returnType isEqualToString:@"i"] || [returnType isEqualToString:@"q"]) {
         int intValue = ((int(*)(id, Method))method_invoke)(self, mt);
         NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
         
@@ -98,7 +98,7 @@
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
       NSString *argumentType = [class getMethodArgumentType:mt index:2];
-      if ([argumentType isEqualToString:@"i"]) {
+      if ([argumentType isEqualToString:@"i"] || [argumentType isEqualToString:@"q"]) {
         int intValue = [aDecoder decodeIntegerForKey:name];
         void (*method_invokeTyped)(id self, Method mt, int value) = (void*)method_invoke;
         method_invokeTyped(self, mt, intValue);
