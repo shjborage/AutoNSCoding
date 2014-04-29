@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "AutoNSCoding.podspec"
-  s.version      = "0.1.2"
+  s.name         = "AutoNSCoding"
+  s.version      = "0.1.3"
   s.summary      = "Make NSCoding protocol automatic."
 
   s.description  = <<-DESC
@@ -13,9 +13,10 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/shjborage/AutoNSCoding"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.author             = { "Eric" => "shjborage@icloud.com" }
+  s.author       = { "Eric" => "shjborage@icloud.com" }
   s.social_media_url = "http://twitter.com/Eric_shj"
   s.platform     = :ios, '2.0'
-  s.source       = { :git => "https://github.com/shjborage/AutoNSCoding.git", :tag => "v0.1.2" }
-  s.source_files  = '*.{h,m}'
+  s.source       = { :git => "https://github.com/shjborage/AutoNSCoding.git", :tag => "v0.1.3" }
+  s.source_files = '*.{h,m}'
+  s.requires_arc = true
 end
