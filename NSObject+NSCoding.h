@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kNSCodingDebugLoging      0
+
 @interface NSObject (NSCoding)
 
 - (void)encodeAutoWithCoder:(NSCoder *)aCoder;
