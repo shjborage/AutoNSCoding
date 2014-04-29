@@ -43,7 +43,10 @@
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
       NSString *returnType = [class getMethodReturnType:mt];
-      if ([returnType isEqualToString:@"i"] || [returnType isEqualToString:@"q"]) {
+      if ([returnType isEqualToString:@"i"] ||
+          [returnType isEqualToString:@"q"] ||
+          [returnType isEqualToString:@"Q"])
+      {
         int intValue = ((int(*)(id, Method))method_invoke)(self, mt);
 #if kNSCodingDebugLoging
         NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
@@ -55,14 +58,18 @@
         NSLog(@"Encode %@ %@ int value:%d", NSStringFromClass(class), name, intValue);
 #endif
         [aCoder encodeInteger:intValue forKey:name];
-      } else if ([returnType isEqualToString:@"f"] || [returnType isEqualToString:@"d"]) {
+      } else if ([returnType isEqualToString:@"f"] ||
+                 [returnType isEqualToString:@"d"])
+      {
         double doubleValue = ((double(*)(id, Method))method_invoke)(self, mt);
 #if kNSCodingDebugLoging
         NSLog(@"Encode %@ %@ double value:%.f", NSStringFromClass(class), name, doubleValue);
 #endif
         
         [aCoder encodeDouble:doubleValue forKey:name];
-      } else if ([returnType isEqualToString:@"c"]) {   // char 一般为BOOL, property不用char即可
+      } else if ([returnType isEqualToString:@"c"] ||
+                 [returnType isEqualToString:@"B"])
+      {   // char 一般为BOOL, property不用char即可
         BOOL boolValue = ((char(*)(id, Method))method_invoke)(self, mt);
 #if kNSCodingDebugLoging
         NSLog(@"Encode %@ %@ BOOL value:%d", NSStringFromClass(class), name, boolValue);
@@ -106,19 +113,22 @@
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
       NSString *argumentType = [class getMethodArgumentType:mt index:2];
-      if ([argumentType isEqualToString:@"i"] || [argumentType isEqualToString:@"q"]) {
-        int intValue = [aDecoder decodeIntegerForKey:name];
-        void (*method_invokeTyped)(id self, Method mt, int value) = (void*)method_invoke;
+      if ([argumentType isEqualToString:@"i"] ||
+          [argumentType isEqualToString:@"q"] ||
+          [argumentType isEqualToString:@"Q"])
+      {
+        NSInteger intValue = [aDecoder decodeIntegerForKey:name];
+        void (*method_invokeTyped)(id self, Method mt, NSInteger value) = (void*)method_invoke;
         method_invokeTyped(self, mt, intValue);
 #if kNSCodingDebugLoging
-        NSLog(@"Decode %@ %@  intValue:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Decode %@ %@  intValue:%ld", NSStringFromClass(class), name, (long)intValue);
 #endif
       } else if ([argumentType isEqualToString:@"I"]) {
-        unsigned intValue = [aDecoder decodeIntegerForKey:name];
-        void (*method_invokeTyped)(id self, Method mt, unsigned value) = (void*)method_invoke;
-        method_invokeTyped(self, mt, intValue);
+        NSUInteger uIntValue = [aDecoder decodeIntegerForKey:name];
+        void (*method_invokeTyped)(id self, Method mt, NSUInteger value) = (void*)method_invoke;
+        method_invokeTyped(self, mt, uIntValue);
 #if kNSCodingDebugLoging
-        NSLog(@"Decode %@ %@   unsigned intValue:%d", NSStringFromClass(class), name, intValue);
+        NSLog(@"Decode %@ %@   unsigned intValue:%lu", NSStringFromClass(class), name, (unsigned long)uIntValue);
 #endif
       } else if ([argumentType isEqualToString:@"f"] || [argumentType isEqualToString:@"d"]) {
         double doubleValue = [aDecoder decodeDoubleForKey:name];
@@ -127,7 +137,9 @@
 #if kNSCodingDebugLoging
         NSLog(@"Decode %@ %@  doubleValue:%f", NSStringFromClass(class), name, doubleValue);
 #endif
-      } else if ([argumentType isEqualToString:@"c"]) {   // char 一般为BOOL, property不用char即可
+      } else if ([argumentType isEqualToString:@"c"] ||
+                 [argumentType isEqualToString:@"B"])
+      {   // char 一般为BOOL, property不用char即可
         BOOL boolValue = [aDecoder decodeBoolForKey:name];
         void (*method_invokeTyped)(id self, Method mt, BOOL value) = (void*)method_invoke;
         method_invokeTyped(self, mt, boolValue);
@@ -182,7 +194,7 @@
 {
   char dstType[10] = {0};
   size_t dstTypeLen = 10;
-  method_getArgumentType(mt, index, dstType, dstTypeLen);
+  method_getArgumentType(mt, (unsigned)index, dstType, dstTypeLen);
   return [NSString stringWithUTF8String:dstType];
 }
 
