@@ -5,4 +5,6 @@ before_install:
     - gem install cocoapods
 
 script:
-    - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo/AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
+    - cd AutoNSCodingDemo
+    - pod install
+    - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
