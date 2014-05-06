@@ -1,4 +1,4 @@
 language: objective-c
 xcode_workspace: AnalyticsSDKDemo/AnalyticsSDKDemo.xcworkspace
 #xcode_project: MyNewProject.xcodeproj # path to your xcodeproj folder
-#xcode_scheme: MyNewProjectTests
+xcode_scheme: AnalyticsSDKDemo
