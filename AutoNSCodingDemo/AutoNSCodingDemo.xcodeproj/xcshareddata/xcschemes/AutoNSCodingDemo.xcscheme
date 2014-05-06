@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0C0AE1B18D597CE00BD8F93"
-               BuildableName = "AutoNSCodingDemoTests.xctest"
-               BlueprintName = "AutoNSCodingDemoTests"
+               BlueprintIdentifier = "A0C0AE0018D597CE00BD8F93"
+               BuildableName = "AutoNSCodingDemo.app"
+               BlueprintName = "AutoNSCodingDemo"
                ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0C0AE0018D597CE00BD8F93"
-               BuildableName = "AutoNSCodingDemo.app"
-               BlueprintName = "AutoNSCodingDemo"
+               BlueprintIdentifier = "A0C0AE1B18D597CE00BD8F93"
+               BuildableName = "AutoNSCodingDemoTests.xctest"
+               BlueprintName = "AutoNSCodingDemoTests"
                ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,6 +53,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A0C0AE0018D597CE00BD8F93"
+            BuildableName = "AutoNSCodingDemo.app"
+            BlueprintName = "AutoNSCodingDemo"
+            ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -63,6 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A0C0AE0018D597CE00BD8F93"
+            BuildableName = "AutoNSCodingDemo.app"
+            BlueprintName = "AutoNSCodingDemo"
+            ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,6 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A0C0AE0018D597CE00BD8F93"
+            BuildableName = "AutoNSCodingDemo.app"
+            BlueprintName = "AutoNSCodingDemo"
+            ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
