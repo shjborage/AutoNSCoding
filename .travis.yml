@@ -1,5 +1,6 @@
 language: objective-c
 
 script:
+    - cd AutoNSCodingDemo
     - pod install
-    - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo/AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
+    - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
