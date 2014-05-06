@@ -10,10 +10,7 @@ language: objective-c
 script:
 #  - ./brewv xctool 0.1.7
 #  - brew switch xctool 0.1.7
-  - xctool test \
-  -sdk iphonesimulator7.0 \
-  -workspace AutoNSCodingDemo/AutoNSCodingDemo.xcworkspace \
-  -scheme AutoNSCodingDemoTests
+  - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo/AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
 
 #before_install:
 #  - gem install xcpretty
