@@ -1,6 +1,8 @@
 language: objective-c
 
+before_install:
+    - gem update
+    - gem install cocoapods
+
 script:
-    - cd AutoNSCodingDemo
-    - pod install
     - xctool test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
