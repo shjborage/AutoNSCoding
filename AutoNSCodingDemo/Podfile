@@ -1,3 +1,7 @@
 platform :ios, '7.0'
 
 pod 'TMCache'
+
+target :AutoNSCodingDemoTests, :exclusive => true do
+  pod 'Kiwi/XCTest'
+end

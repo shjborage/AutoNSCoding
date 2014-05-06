@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		479F0F121918C5C800E38556 /* NSObject+NSCodingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F0F111918C5C800E38556 /* NSObject+NSCodingSpec.m */; };
+		479F0F131918CA0500E38556 /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4518D59CDE00BD8F93 /* Parent.m */; };
+		479F0F141918CA0500E38556 /* Children.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4818D59CF000BD8F93 /* Children.m */; };
+		479F0F151918CA0500E38556 /* FullCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4B18D59D5D00BD8F93 /* FullCopy.m */; };
 		7CF2335CC4C04BC69843792A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84083FA2F92E4F149F8BA06D /* libPods.a */; };
 		A0C0AE0518D597CE00BD8F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0418D597CE00BD8F93 /* Foundation.framework */; };
 		A0C0AE0718D597CE00BD8F93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0618D597CE00BD8F93 /* CoreGraphics.framework */; };
@@ -19,11 +23,11 @@
 		A0C0AE1F18D597CE00BD8F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0418D597CE00BD8F93 /* Foundation.framework */; };
 		A0C0AE2018D597CE00BD8F93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C0AE0818D597CE00BD8F93 /* UIKit.framework */; };
 		A0C0AE2818D597CE00BD8F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0C0AE2618D597CE00BD8F93 /* InfoPlist.strings */; };
-		A0C0AE2A18D597CE00BD8F93 /* AutoNSCodingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */; };
 		A0C0AE3518D5983E00BD8F93 /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE3418D5983E00BD8F93 /* NSObject+NSCoding.m */; };
 		A0C0AE4618D59CDE00BD8F93 /* Parent.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4518D59CDE00BD8F93 /* Parent.m */; };
 		A0C0AE4918D59CF000BD8F93 /* Children.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4818D59CF000BD8F93 /* Children.m */; };
 		A0C0AE4C18D59D5D00BD8F93 /* FullCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C0AE4B18D59D5D00BD8F93 /* FullCopy.m */; };
+		C91C9928D2BC4DED8BA1C6D4 /* libPods-AutoNSCodingDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8260A93F32364B879AD765A5 /* libPods-AutoNSCodingDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		479F0F111918C5C800E38556 /* NSObject+NSCodingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCodingSpec.m"; sourceTree = "<group>"; };
+		78B7997740E74883B2D7AD4E /* Pods-AutoNSCodingDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoNSCodingDemoTests.xcconfig"; path = "Pods/Pods-AutoNSCodingDemoTests.xcconfig"; sourceTree = "<group>"; };
+		8260A93F32364B879AD765A5 /* libPods-AutoNSCodingDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoNSCodingDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84083FA2F92E4F149F8BA06D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C0AE0118D597CE00BD8F93 /* AutoNSCodingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoNSCodingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C0AE0418D597CE00BD8F93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,7 +60,6 @@
 		A0C0AE1D18D597CE00BD8F93 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A0C0AE2518D597CE00BD8F93 /* AutoNSCodingDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoNSCodingDemoTests-Info.plist"; sourceTree = "<group>"; };
 		A0C0AE2718D597CE00BD8F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoNSCodingDemoTests.m; sourceTree = "<group>"; };
 		A0C0AE3318D5983E00BD8F93 /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NSCoding.h"; path = "../NSObject+NSCoding.h"; sourceTree = "<group>"; };
 		A0C0AE3418D5983E00BD8F93 /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NSCoding.m"; path = "../NSObject+NSCoding.m"; sourceTree = "<group>"; };
 		A0C0AE4418D59CDE00BD8F93 /* Parent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parent.h; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 				A0C0AE1E18D597CE00BD8F93 /* XCTest.framework in Frameworks */,
 				A0C0AE2018D597CE00BD8F93 /* UIKit.framework in Frameworks */,
 				A0C0AE1F18D597CE00BD8F93 /* Foundation.framework in Frameworks */,
+				C91C9928D2BC4DED8BA1C6D4 /* libPods-AutoNSCodingDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +107,7 @@
 				A0C0AE0318D597CE00BD8F93 /* Frameworks */,
 				A0C0AE0218D597CE00BD8F93 /* Products */,
 				DA76CC628CBD41BFAC3ADCF1 /* Pods.xcconfig */,
+				78B7997740E74883B2D7AD4E /* Pods-AutoNSCodingDemoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +128,7 @@
 				A0C0AE0818D597CE00BD8F93 /* UIKit.framework */,
 				A0C0AE1D18D597CE00BD8F93 /* XCTest.framework */,
 				84083FA2F92E4F149F8BA06D /* libPods.a */,
+				8260A93F32364B879AD765A5 /* libPods-AutoNSCodingDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,8 +159,8 @@
 		A0C0AE2318D597CE00BD8F93 /* AutoNSCodingDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0C0AE2918D597CE00BD8F93 /* AutoNSCodingDemoTests.m */,
 				A0C0AE2418D597CE00BD8F93 /* Supporting Files */,
+				479F0F111918C5C800E38556 /* NSObject+NSCodingSpec.m */,
 			);
 			path = AutoNSCodingDemoTests;
 			sourceTree = "<group>";
@@ -204,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0C0AE3018D597CE00BD8F93 /* Build configuration list for PBXNativeTarget "AutoNSCodingDemoTests" */;
 			buildPhases = (
+				D2AD9F3E64444A44B665EB70 /* Check Pods Manifest.lock */,
 				A0C0AE1818D597CE00BD8F93 /* Sources */,
 				A0C0AE1918D597CE00BD8F93 /* Frameworks */,
 				A0C0AE1A18D597CE00BD8F93 /* Resources */,
+				2355516F9542433A90AB8C9C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +282,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2355516F9542433A90AB8C9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AutoNSCodingDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		36FA89CC26994A82AE30496A /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +313,21 @@
 			showEnvVarsInLog = 0;
 		};
 		5F98168632104905AB92F2B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2AD9F3E64444A44B665EB70 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,7 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C0AE2A18D597CE00BD8F93 /* AutoNSCodingDemoTests.m in Sources */,
+				479F0F131918CA0500E38556 /* Parent.m in Sources */,
+				479F0F141918CA0500E38556 /* Children.m in Sources */,
+				479F0F151918CA0500E38556 /* FullCopy.m in Sources */,
+				479F0F121918C5C800E38556 /* NSObject+NSCodingSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +499,7 @@
 		};
 		A0C0AE3118D597CE00BD8F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B7997740E74883B2D7AD4E /* Pods-AutoNSCodingDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AutoNSCodingDemo.app/AutoNSCodingDemo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -477,6 +522,7 @@
 		};
 		A0C0AE3218D597CE00BD8F93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B7997740E74883B2D7AD4E /* Pods-AutoNSCodingDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AutoNSCodingDemo.app/AutoNSCodingDemo";
 				FRAMEWORK_SEARCH_PATHS = (
