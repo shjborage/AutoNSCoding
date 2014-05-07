@@ -7,4 +7,4 @@ before_install:
 script:
     - cd AutoNSCodingDemo
     - pod install
-    - xctool clean build test -sdk iphonesimulator6.0 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
+    - xctool clean build test -sdk iphonesimulator7.1 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
