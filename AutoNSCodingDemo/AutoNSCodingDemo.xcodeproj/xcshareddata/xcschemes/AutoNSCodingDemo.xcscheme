@@ -20,20 +20,6 @@
                ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0C0AE1B18D597CE00BD8F93"
-               BuildableName = "AutoNSCodingDemoTests.xctest"
-               BlueprintName = "AutoNSCodingDemoTests"
-               ReferencedContainer = "container:AutoNSCodingDemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

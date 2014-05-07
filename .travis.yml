@@ -1,13 +1,13 @@
 language: objective-c
-#xcode_workspace: AutoNSCodingDemo/AutoNSCodingDemo.xcworkspace
-#xcode_project: MyNewProject.xcodeproj # path to your xcodeproj folder
-#xcode_scheme: AutoNSCodingDemoTests
 
 before_install:
+    - brew update
+    - brew unlink xctool
+    - brew install xctool
     - gem update
     - gem install cocoapods
 
 script:
     - cd AutoNSCodingDemo
     - pod install
-    - xctool clean build -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests -sdk iphonesimulator7.0
+    - xctool clean build test -sdk iphonesimulator7.0 -workspace AutoNSCodingDemo.xcworkspace -scheme AutoNSCodingDemoTests
