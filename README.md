@@ -1,6 +1,10 @@
 AutoNSCoding
 ============
 
+[![Version](https://cocoapod-badges.herokuapp.com/v/AutoNSCoding/badge.png)](https://cocoapod-badges.herokuapp.com/v/AutoNSCoding/badge.png)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/AutoNSCoding/badge.png)](https://cocoapod-badges.herokuapp.com/p/AutoNSCoding/badge.png)
+[![Build Status](https://travis-ci.org/shjborage/AutoNSCoding.png?branch=master)](https://travis-ci.org/shjborage/AutoNSCoding)
+
 Few words to make your NSCoding protocol automatic.
 
 
