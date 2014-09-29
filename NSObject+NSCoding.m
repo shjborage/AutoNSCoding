@@ -38,7 +38,12 @@
   for (int i = 0; i < outCount; i++) {
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-    
+
+    // Ignore Properties indrocuded with iOS 8
+    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+        continue;
+    }
+
     SEL selector = NSSelectorFromString(name);
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
@@ -108,7 +113,12 @@
   for (int i = 0; i< outCount; i++) {
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-    
+
+    // Ignore Properties indrocuded with iOS 8
+    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+        continue;
+    }
+
     SEL selector = NSSelectorFromString([class getSetMethodName:name]);
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
