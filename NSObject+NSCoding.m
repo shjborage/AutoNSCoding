@@ -39,7 +39,7 @@
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
 
-    // Ignore Properties indrocuded with iOS 8
+    // Ignore properties indrocuded with iOS 8
     if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
         continue;
     }
@@ -114,7 +114,7 @@
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
 
-    // Ignore Properties indrocuded with iOS 8
+    // Ignore properties indrocuded with iOS 8
     if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
         continue;
     }
