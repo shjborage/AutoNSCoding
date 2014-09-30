@@ -39,8 +39,7 @@
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
 
-    // Ignore properties indrocuded with iOS 8
-    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+    if (![self shouldEncodePropertyName:name]) {
         continue;
     }
 
@@ -114,8 +113,7 @@
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
 
-    // Ignore properties indrocuded with iOS 8
-    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+    if (![self shouldEncodePropertyName:name]) {
         continue;
     }
 
@@ -191,6 +189,15 @@
 }
 
 #pragma mark - private
+
+- (BOOL)shouldEncodePropertyName:(NSString *)name {
+    // Ignore properties indrocuded with iOS 8
+    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+        return NO;
+    }
+    
+    return YES;
+}
 
 + (NSString *)getMethodReturnType:(Method)mt
 {
