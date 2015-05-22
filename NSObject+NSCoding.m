@@ -156,8 +156,10 @@
       } else {
         @try {
           id value = [aDecoder decodeObjectForKey:name];
-          if (value != nil)
-            method_invoke(self, mt, value);
+            if (value != nil){
+                void (*method_invokeTyped)(id self, Method mt, NSString *value) = (void*)method_invoke;
+                method_invokeTyped(self, mt, value);
+            }
 #if kNSCodingDebugLoging
           NSLog(@"Decode %@ %@  value:%@", NSStringFromClass(class), name, value);
 #endif
