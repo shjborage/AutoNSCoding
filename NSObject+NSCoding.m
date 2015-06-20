@@ -38,7 +38,11 @@
   for (int i = 0; i < outCount; i++) {
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-    
+
+    if (![self shouldEncodePropertyName:name]) {
+        continue;
+    }
+
     SEL selector = NSSelectorFromString(name);
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
@@ -108,7 +112,11 @@
   for (int i = 0; i< outCount; i++) {
     objc_property_t property = pt[i];
     NSString *name = [NSString stringWithUTF8String:property_getName(property)];
-    
+
+    if (![self shouldEncodePropertyName:name]) {
+        continue;
+    }
+
     SEL selector = NSSelectorFromString([class getSetMethodName:name]);
     Method mt = class_getInstanceMethod(class, selector);
     if (mt != NULL) {
@@ -183,6 +191,15 @@
 }
 
 #pragma mark - private
+
+- (BOOL)shouldEncodePropertyName:(NSString *)name {
+    // Ignore properties indrocuded with iOS 8
+    if ([@[@"description", @"debugDescription", @"superclass"] containsObject:name]) {
+        return NO;
+    }
+    
+    return YES;
+}
 
 + (NSString *)getMethodReturnType:(Method)mt
 {
